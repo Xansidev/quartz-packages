@@ -5,6 +5,7 @@ description = "A fast search tool that recursively searches directories"
 github = "https://github.com/BurntSushi/ripgrep"
 maintainer = "Xansidev"
 deps = []
+category = "extra"
 
 [source]
 url = "https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz"
