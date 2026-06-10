@@ -4,19 +4,26 @@ version = "14.1.0"
 description = "A fast search tool that recursively searches directories"
 github = "https://github.com/BurntSushi/ripgrep"
 maintainer = "Xansidev"
-deps = []
 category = "extra"
+architecture = ["x86_64"]
 
 [source]
 url = "https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz"
 sha256 = "334b41aa5c6035d5d27716523204b21a849f85ab9a539372b23e782330e09b68"
 
+[dependencies]
+packages = []
+
 [install]
-bin = ["ripgrep-14.1.0-x86_64-unknown-linux-musl/rg -> /usr/local/bin/rg"]
+copy = [
+  "ripgrep-14.1.0-x86_64-unknown-linux-musl/rg -> /usr/local/bin/rg"
+]
 
 [remove]
-bin = ["/usr/local/bin/rg"]
+delete = [
+  "/usr/local/bin/rg"
+]
 
 [log]
-install_log = "~/.quartz/logs/install.log"
-remove_log = "~/.quartz/logs/remove.log"
+install = "~/.quartz/logs/install.log"
+remove = "~/.quartz/logs/remove.log"
